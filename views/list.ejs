@@ -1,0 +1,31 @@
+<%- include("header") -%>
+<body>
+    <!-- Scripet tags can be added to run the codes.. The scriplet tags should cover all the parts which are not html. Scriplet tags allows us to write 
+    flow control code -->
+    <!-- Scriplet tags have to be added line by line -->
+    <div class="box" id="heading">
+        <h1><%= listTitle %></h1>
+    </div>
+    <div class="box">        
+            <% for(var i =0;i<newItem.length;i++){%>
+                <div class="item">
+                    <input type="checkbox">
+                    <p><%= newItem[i] %></p>
+                </div>
+                
+            <%}%>
+
+            <form action="/" method="POST" class="item">
+
+                <input type="text"  name = "item" placeholder="New item" autocomplete="off">
+                <button type="submit" name = "list" value= <%= listTitle %>>+</button>
+            </form>
+
+
+    </div>
+  
+   
+    
+</body>
+<%- include("footer") -%>
+</html>
